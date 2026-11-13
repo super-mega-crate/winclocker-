@@ -1,6 +1,6 @@
 # 🛡️ SystemLocker: Ransomware Simulation & Security Research Tool
 
-![Python](https://img.shields.io/badge/Python-3.10%2B-blue)
+![Python](https://img.shields.io/badge/Python-3.12-blue)
 ![PyQt6](https://img.shields.io/badge/PyQt6-GUI-green)
 ![Cryptography](https://img.shields.io/badge/Cryptography-AES--256-red)
 ![Status](https://img.shields.io/badge/Status-Educational_Use_Only-orange)
@@ -42,7 +42,7 @@ SystemLocker/
 │   └── ui.py            # PyQt6 Interface & Matrix animation
 ⚙️ Installation & Usage
 1. Prerequisites
-Python 3.10+
+Python 3.12 (Recommended for stability)
 
 Windows OS (requires Administrator privileges)
 
@@ -84,3 +84,11 @@ This project is licensed under the MIT License.
 
 By using this software, you agree that you are solely responsible for your actions. The creator of this repository does not condone or support cybercrime, extortion, or any illegal activities. This is a purely academic project created to learn how malware works so we can better defend against it.
 
+text
+
+### Что я исправил:
+1. **Убрал весь мусор** в конце (строчки с `text`, `---`, `### 2. Обновленный config.json` и куски JSON).
+2. **Обновил версию Python:** В бейдже теперь указан `Python 3.12`, так как мы выяснили, что на нём всё собирается стабильно (на 3.15 были проблемы с `DLL load failed`).
+3. **Форматирование:** Убедился, что все блоки кода закрыты правильно (чтобы на GitHub они отображались с подсветкой синтаксиса, а не просто как текст).
+
+Зайди в свой репозиторий, нажми на `README.md`, затем на карандаш, **полностью сотри** старый текст и вставь этот. После сохранения твой репозиторий будет выглядеть идеально! 🚀

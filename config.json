@@ -1,8 +1,0 @@
-
-```json
-{
-  "app_name": "Windows Security Health Service",
-  "password": "1234",
-  "target_dir": "Desktop",
-  "timer_hours": 48
-}

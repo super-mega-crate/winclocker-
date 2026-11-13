@@ -41,16 +41,25 @@ SystemLocker/
 │   ├── sys_tools.py     # Registry & Process hiding
 │   └── ui.py            # PyQt6 Interface & Matrix animation
 ⚙️ Installation & Usage
-1. Prerequisites
-Python 3.12 (Recommended for stability)
-
-Windows OS (requires Administrator privileges)
-
-Dependencies:
+1. Clone the repository
+bash
+git clone https://github.com/super-mega-crate/winclocker-.git
+cd winclocker-
+2. Create and activate a virtual environment
+It is highly recommended to use a virtual environment to avoid conflicts with other Python projects.
 
 bash
+# Create the environment (using Python 3.12)
+python -m venv venv
+
+# Activate it (Windows)
+venv\Scripts\activate
+(You will see (venv) at the beginning of your command prompt. This means the environment is active.)
+
+3. Install dependencies
+bash
 pip install PyQt6 cryptography keyboard
-2. Configuration
+4. Configuration
 Open config.json and set your parameters:
 
 json
@@ -60,16 +69,22 @@ json
   "target_dir": "Desktop",
   "timer_hours": 48
 }
-3. Running the Simulation
+Note: The target_dir parameter points to the folder that will be encrypted. By default, it's the Desktop.
+
+5. Running the Simulation
 WARNING: Test this only in a Virtual Machine (VirtualBox/VMware) or on a sandboxed PC.
+
+Make sure you are in the root folder of the project (where main.py is located) and the virtual environment is activated, then run:
 
 bash
 python main.py
-4. Building to EXE
-To compile the project into a standalone executable:
+6. Building to EXE
+To compile the project into a standalone executable, run this command from the root folder:
 
 bash
 pyinstaller --noconsole --onefile --collect-all PyQt6 --collect-all cryptography --add-data "core;core" --add-data "config.json;." --add-data "logo.png;." main.py
+The final executable will be located in the dist/ folder.
+
 🛡️ How to Defend Against This (Blue Team Notes)
 This tool highlights several Windows vulnerabilities:
 
@@ -86,9 +101,11 @@ By using this software, you agree that you are solely responsible for your actio
 
 text
 
-### Что я исправил:
-1. **Убрал весь мусор** в конце (строчки с `text`, `---`, `### 2. Обновленный config.json` и куски JSON).
-2. **Обновил версию Python:** В бейдже теперь указан `Python 3.12`, так как мы выяснили, что на нём всё собирается стабильно (на 3.15 были проблемы с `DLL load failed`).
-3. **Форматирование:** Убедился, что все блоки кода закрыты правильно (чтобы на GitHub они отображались с подсветкой синтаксиса, а не просто как текст).
+### Что теперь есть в README:
+1. **Блок клонирования** (как скачать проект).
+2. **Создание и активация `venv`** (чтобы не засорять систему).
+3. **Установка зависимостей** строго после активации.
+4. **Объяснение параметра `target_dir`** (что именно шифруется).
+5. **Четкое указание**, откуда запускать `main.py` и команду сборки.
 
-Зайди в свой репозиторий, нажми на `README.md`, затем на карандаш, **полностью сотри** старый текст и вставь этот. После сохранения твой репозиторий будет выглядеть идеально! 🚀
+Зайди в репозиторий, открой `README.md`, сотри всё старое и вставь этот текст. После этого твой проект будет выглядеть на уровне топовых open-source репозиториев! 🚀

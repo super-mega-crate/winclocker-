@@ -84,15 +84,3 @@ This project is licensed under the MIT License.
 
 By using this software, you agree that you are solely responsible for your actions. The creator of this repository does not condone or support cybercrime, extortion, or any illegal activities. This is a purely academic project created to learn how malware works so we can better defend against it.
 
-text
-
----
-
-### 2. Обновленный `config.json`
-```json
-{
-  "app_name": "Windows Security Health Service",
-  "password": "1234",
-  "target_dir": "Desktop",
-  "timer_hours": 48
-}
